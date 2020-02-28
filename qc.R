@@ -1,6 +1,6 @@
 qc_star_log <- read.table(file = "~/Desktop/oocytes_analyses/190225/sampleinfoF1F2F3_CVHVCDnew.txt", header = T,
                           row.names = 1, sep="\t")
-rpkm_matrix <- read.table(file = "~/Desktop/oocytes_analyses/190225/counts_F1F2F3CVCDHVnew.txt",header = T,
+rpkm_matrix <- read.table(file = "~/Desktop/oocytes_analyses/190225/rpkm_F1F2F3CVCDHVnew.txt",header = T,
                           row.names = NULL,sep="\t")
 map_ratio_reads <- (qc_star_log[,3]>60)&(qc_star_log[,1]>1000000)
 rpkm_matrix_f1 <- t(t(rpkm_matrix)[map_ratio_reads,])
